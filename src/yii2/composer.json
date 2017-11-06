@@ -12,20 +12,16 @@
         "irc": "irc://irc.freenode.net/yii",
         "source": "https://github.com/yiisoft/yii2"
     },
-	"minimum-stability": "dev",
-	"prefer-stable": true,
-	"repositories": [
-		{
-			"type": "path",
-			"url": "../../../yii2-batsg"
-		}
-	],
+    "autoload": {
+        "psr-4": {
+            "batsg\\": "../../../yii2-batsg/src"
+        }
+    },
     "require": {
         "php": ">=5.4.0",
         "yiisoft/yii2": "~2.0.5",
         "yiisoft/yii2-bootstrap": "~2.0.0",
-        "yiisoft/yii2-swiftmailer": "~2.0.0",
-		"umbalaconmeogia/yii2-batsg": "*"
+        "yiisoft/yii2-swiftmailer": "~2.0.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

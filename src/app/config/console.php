@@ -13,6 +13,11 @@ $config = [
         ],
     ],
     */
+    'components' => [
+        'session' => [ // for use session in console application
+            'class' => 'yii\web\Session'
+        ],
+    ],
 ];
 
 $config = array_merge_recursive($common, $config);

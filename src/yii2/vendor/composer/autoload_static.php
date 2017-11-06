@@ -33,6 +33,10 @@ class ComposerStaticInitc22a6a76a7e576c519fe0104bbd8dbd7
         array (
             'cebe\\markdown\\' => 14,
         ),
+        'b' => 
+        array (
+            'batsg\\' => 6,
+        ),
         'W' => 
         array (
             'Webmozart\\Assert\\' => 17,
@@ -113,6 +117,10 @@ class ComposerStaticInitc22a6a76a7e576c519fe0104bbd8dbd7
         'cebe\\markdown\\' => 
         array (
             0 => __DIR__ . '/..' . '/cebe/markdown',
+        ),
+        'batsg\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/../../../yii2-batsg/src',
         ),
         'Webmozart\\Assert\\' => 
         array (
