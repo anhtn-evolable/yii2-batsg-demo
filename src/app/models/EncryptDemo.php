@@ -3,7 +3,7 @@
 namespace app\models;
 
 use Yii;
-use batsg\models\traits\EncryptedActiveRecordTrait;
+use batsg\models\attrEncrypt\EncryptedActiveRecordTrait;
 
 /**
  * This is the model class for table "encrypt_demo".
