@@ -29,18 +29,22 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'date_field_encrypt',
                 'contentOptions' => ['style' => ['max-width' => '100px;', 'word-wrap' => 'break-word']],
             ],
+            'dateField',
             [
                 'attribute' => 'string_field_encrypt',
                 'contentOptions' => ['style' => ['max-width' => '100px;', 'word-wrap' => 'break-word']],
             ],
+            'stringField',
             [
                 'attribute' => 'integer_field_encrypt',
                 'contentOptions' => ['style' => ['max-width' => '100px;', 'word-wrap' => 'break-word']],
             ],
+            'integerField',
             [
                 'attribute' => 'float_field_encrypt',
                 'contentOptions' => ['style' => ['max-width' => '100px;', 'word-wrap' => 'break-word']],
             ],
+            'floatField',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

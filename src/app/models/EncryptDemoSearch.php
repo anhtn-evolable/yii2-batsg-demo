@@ -20,6 +20,7 @@ class EncryptDemoSearch extends EncryptDemo
         return [
             [['id', 'data_status', 'created_by', 'created_at', 'updated_by', 'updated_at'], 'integer'],
             [['date_field_encrypt', 'string_field_encrypt', 'integer_field_encrypt', 'float_field_encrypt'], 'safe'],
+            [['dateField', 'stringField', 'integerField', 'floatField'], 'safe'],
         ];
     }
 
