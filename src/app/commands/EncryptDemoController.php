@@ -12,7 +12,7 @@ class EncryptDemoController extends Controller
 
         $encryptDemo = EncryptDemo::findOneCreateNew(['id' => 1]);
         $encryptDemo->dateField = '2017/10/22';
-        $encryptDemo->stringField = 'my string';
+        $encryptDemo->stringField = "my string {$encryptDemo->id}";
         $encryptDemo->integerField = 12345;
         $encryptDemo->floatField = 123.45;
         $encryptDemo->save();
@@ -20,7 +20,7 @@ class EncryptDemoController extends Controller
 
         $encryptDemo = EncryptDemo::findOneCreateNew(['id' => 2]);
         $encryptDemo->dateField = '2017/10/22';
-        $encryptDemo->stringField = 'my string';
+        $encryptDemo->stringField = "my string {$encryptDemo->id}";
         $encryptDemo->integerField = 12345;
         $encryptDemo->floatField = 123.45;
         $encryptDemo->save();
