@@ -19,10 +19,10 @@ class EncryptDemoController extends Controller
         $this->printR($encryptDemo);
 
         $encryptDemo = EncryptDemo::findOneCreateNew(['id' => 2]);
-        $encryptDemo->dateField = '2017/10/22';
+        $encryptDemo->dateField = '2017/11/22';
         $encryptDemo->stringField = "my string {$encryptDemo->id}";
-        $encryptDemo->integerField = 12345;
-        $encryptDemo->floatField = 123.45;
+        $encryptDemo->integerField = 12346;
+        $encryptDemo->floatField = 123.46;
         $encryptDemo->save();
         $this->printR($encryptDemo);
     }

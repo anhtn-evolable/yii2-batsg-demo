@@ -12,13 +12,13 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'date_field_encrypt')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'dateField')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'string_field_encrypt')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'stringField')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'integer_field_encrypt')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'integerField')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'float_field_encrypt')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'floatField')->textarea(['rows' => 6]) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

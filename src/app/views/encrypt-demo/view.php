@@ -29,10 +29,10 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'date_field_encrypt:ntext',
-            'string_field_encrypt:ntext',
-            'integer_field_encrypt:ntext',
-            'float_field_encrypt:ntext',
+            'dateField:ntext',
+            'stringField:ntext',
+            'integerField:ntext',
+            'floatField:ntext',
         ],
     ]) ?>
 

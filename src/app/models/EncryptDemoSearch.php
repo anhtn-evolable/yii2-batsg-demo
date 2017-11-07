@@ -2,10 +2,10 @@
 
 namespace app\models;
 
-use Yii;
+use app\models\EncryptDemo;
+use batsg\models\attrEncrypt\EncryptedActiveRecordSearchTrait;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\EncryptDemo;
 use yii\data\ArrayDataProvider;
 
 /**
@@ -13,6 +13,8 @@ use yii\data\ArrayDataProvider;
  */
 class EncryptDemoSearch extends EncryptDemo
 {
+    use EncryptedActiveRecordSearchTrait;
+
     /**
      * @inheritdoc
      */
@@ -20,7 +22,8 @@ class EncryptDemoSearch extends EncryptDemo
     {
         return [
             [['id', 'data_status', 'created_by', 'created_at', 'updated_by', 'updated_at'], 'integer'],
-            [['date_field_encrypt', 'string_field_encrypt', 'integer_field_encrypt', 'float_field_encrypt', 'dateField', 'stringField', 'integerField', 'floatField'], 'safe'],
+            [['date_field_encrypt', 'string_field_encrypt', 'integer_field_encrypt', 'float_field_encrypt'], 'safe'],
+            [self::encryptedAttributes(), 'safe'],
         ];
     }
 
@@ -48,7 +51,7 @@ class EncryptDemoSearch extends EncryptDemo
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
-//             'pagination' => FALSE,
+            'pagination' => FALSE,
         ]);
 
         $this->load($params);
@@ -69,14 +72,8 @@ class EncryptDemoSearch extends EncryptDemo
             'updated_at' => $this->updated_at,
         ]);
 
-//         $query->andFilterWhere(['like', 'date_field_encrypt', $this->date_field_encrypt])
-//             ->andFilterWhere(['like', 'string_field_encrypt', $this->string_field_encrypt])
-//             ->andFilterWhere(['like', 'integer_field_encrypt', $this->integer_field_encrypt])
-//             ->andFilterWhere(['like', 'float_field_encrypt', $this->float_field_encrypt]);
-
-        return $dataProvider;
         return new ArrayDataProvider([
-            'allModels' => $dataProvider->getModels(),
+            'allModels' => $this->filterModels($dataProvider->getModels()),
         ]);
     }
 }
