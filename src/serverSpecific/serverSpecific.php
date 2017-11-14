@@ -3,9 +3,10 @@ $cache = FALSE;
 return [
 	'db' => [
 		'class' => 'yii\db\Connection',
-		'dsn' => 'sqlite:@app/../serverSpecific/data/yii2-batsg-demo.sqlite',
-		'username' => 'root',
-		'password' => '',
+		'dsn' => 'sqlite:@app/../serverSpecific/data/yii2_batsg_demo.sqlite',
+// 	    'dsn' => 'pgsql:host=localhost;dbname=yii2_batsg_demo',
+		'username' => 'yii2_batsg_demo',
+		'password' => 'yii2_batsg_demo',
 		'charset' => 'utf8',
 		'enableSchemaCache' => $cache,
 		'schemaCacheDuration' => 3600, // Duration of schema cache.
