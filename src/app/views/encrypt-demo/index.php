@@ -25,22 +25,10 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            [
-                'attribute' => 'date_field_encrypt',
-                'contentOptions' => ['style' => ['max-width' => '100px;', 'word-wrap' => 'break-word']],
-            ],
-            [
-                'attribute' => 'string_field_encrypt',
-                'contentOptions' => ['style' => ['max-width' => '100px;', 'word-wrap' => 'break-word']],
-            ],
-            [
-                'attribute' => 'integer_field_encrypt',
-                'contentOptions' => ['style' => ['max-width' => '100px;', 'word-wrap' => 'break-word']],
-            ],
-            [
-                'attribute' => 'float_field_encrypt',
-                'contentOptions' => ['style' => ['max-width' => '100px;', 'word-wrap' => 'break-word']],
-            ],
+            'dateField',
+            'stringField',
+            'integerField',
+            'floatField',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

@@ -12,9 +12,6 @@ NavBar::begin([
 ]);
 $items = [];
 $items[] = ['label' => 'EncryptDemo', 'url' => ['/encrypt-demo/index']];
-$items[] = ['label' => 'Home', 'url' => ['/site/index']];
-$items[] = ['label' => 'About', 'url' => ['/site/about']];
-$items[] = ['label' => 'Contact', 'url' => ['/site/contact']];
 
 if (Yii::$app->user->isGuest) {
     $items[] = ['label' => 'Login', 'url' => ['/site/login']];

@@ -3,6 +3,7 @@ namespace app\commands;
 
 use yii\console\Controller;
 use app\models\EncryptDemo;
+use batsg\helpers\HDateTime;
 
 class EncryptDemoController extends Controller
 {
@@ -10,21 +11,16 @@ class EncryptDemoController extends Controller
     {
         EncryptDemo::setAttributeEncryptionKeyForModels('password1234');
 
-        $encryptDemo = EncryptDemo::findOneCreateNew(['id' => 1]);
-        $encryptDemo->dateField = '2017/10/22';
-        $encryptDemo->stringField = 'my string';
-        $encryptDemo->integerField = 12345;
-        $encryptDemo->floatField = 123.45;
-        $encryptDemo->save();
-        $this->printR($encryptDemo);
-
-        $encryptDemo = EncryptDemo::findOneCreateNew(['id' => 2]);
-        $encryptDemo->dateField = '2017/10/22';
-        $encryptDemo->stringField = 'my string';
-        $encryptDemo->integerField = 12345;
-        $encryptDemo->floatField = 123.45;
-        $encryptDemo->save();
-        $this->printR($encryptDemo);
+        $startDate = HDateTime::createFromString('2017/10/22');
+        for ($i = 1; $i <= 50; $i++) {
+            $encryptDemo = EncryptDemo::findOneCreateNew(['id' => $i]);
+            $encryptDemo->dateField = $startDate->nextNDay($i)->toDateStr();
+            $encryptDemo->stringField = "my string $i";
+            $encryptDemo->integerField = 12345 + $i;
+            $encryptDemo->floatField = 123.45 + $i / 100;
+            $encryptDemo->save();
+        }
+        echo "DONE";
     }
 
     private function printR(EncryptDemo $encryptDemo)

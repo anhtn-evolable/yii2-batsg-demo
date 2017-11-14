@@ -29,7 +29,7 @@ class EncryptDemo extends \batsg\models\BaseBatsgModel
 
     use EncryptedActiveRecordTrait;
 
-    protected $encryptedAttributeDbFields = [
+    static protected $encryptedAttributeDbFields = [
         'dateField' => 'date_field_encrypt',
         'stringField' => 'string_field_encrypt',
         'integerField' => 'integer_field_encrypt',
