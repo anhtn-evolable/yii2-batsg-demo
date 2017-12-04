@@ -1,4 +1,5 @@
 <?php
+// AA
 namespace app\components\yii2batsg;
 
 /**
